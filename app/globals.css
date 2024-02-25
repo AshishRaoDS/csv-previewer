@@ -3,31 +3,64 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0,0,0;
+    --background-start-rgb: wheat;
+    --background-end-rgb: wheat;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: wheat;
+  padding-bottom: 100px;
+  max-width: 2550px;
+  margin: 0 auto;
+  /* border: 1px solid; */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.navigationBar {
+  border-bottom: 1px solid grey;
+}
+
+.fileUpload {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.table {
+  /* display: flex; */
+    margin: 0 20px;
+    justify-content: center;
+    min-width: 350px;
+    max-width: 1220px;
+}
+
+.tableHead, .tableBody, .tr, .td {
+  border: 1px solid;
+}
+
+.tr {
+  /* display: flex;
+  gap: 50px; */
+}
+
+.th, .td {
+  padding: 20px;
+  border: 1px solid;
+  text-align: center;
 }
